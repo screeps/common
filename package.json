@@ -1,13 +1,13 @@
 {
   "name": "@screeps/common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "author": "Artem Chivchalov <contact@screeps.com>",
   "license": "ISC",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/screeps/common.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/screeps/common.git"
   },
   "dependencies": {
     "dnode": "^1.2.2",
