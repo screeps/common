@@ -138,3 +138,40 @@ exports.getDiff = function(oldData, newData) {
 exports.qSequence = function(collection, fn) {
     return _.reduce(collection, (promise, element, key) => promise.then(() => fn(element,key)), q.when());
 };
+
+exports.roomNameToXY = function(name) {
+
+    name = name.toUpperCase();
+
+    var match = name.match(/^(\w)(\d+)(\w)(\d+)$/);
+    if(!match) {
+        return [undefined, undefined];
+    }
+    var [,hor,x,ver,y] = match;
+
+    if(hor == 'W') {
+        x = -x-1;
+    }
+    else {
+        x = +x;
+    }
+    if(ver == 'N') {
+        y = -y-1;
+    }
+    else {
+        y = +y;
+    }
+    return [x,y];
+};
+
+exports.calcWorldSize = function(rooms) {
+    var minX = Infinity, minY = Infinity, maxX = 0, maxY = 0;
+    rooms.forEach(room => {
+        var [x,y] = exports.roomNameToXY(room._id);
+        if(x < minX) minX = x;
+        if(y < minY) minY = y;
+        if(x > maxX) maxX = x;
+        if(y > maxY) maxY = y;
+    });
+    return Math.max(maxX - minX + 1, maxY - minY + 1);
+};
