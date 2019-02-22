@@ -1,51 +1,18 @@
 {
-  "_from": "github:screeps/common#master",
-  "_id": "@screeps/common@2.6.0",
-  "_inBundle": false,
-  "_integrity": "sha1-Wxg8POShwdiSl50g6OAH49oYAt4=",
-  "_location": "/@screeps/common",
-  "_phantomChildren": {},
-  "_requested": {
+  "name": "@screeps/common",
+  "version": "2.10.0-beta.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Artem Chivchalov <contact@screeps.com>",
+  "license": "ISC",
+  "repository": {
     "type": "git",
-    "raw": "@screeps/common@github:screeps/common#master",
-    "name": "@screeps/common",
-    "escapedName": "@screeps%2fcommon",
-    "scope": "@screeps",
-    "rawSpec": "github:screeps/common#master",
-    "saveSpec": "github:screeps/common#master",
-    "fetchSpec": null,
-    "gitCommittish": "master"
+    "url": "https://github.com/screeps/common.git"
   },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "github:screeps/common#c5d3936711a9e3b4b233a230b55576520af98f4f",
-  "_spec": "@screeps/common@github:screeps/common#master",
-  "_where": "C:\\Home\\screeps\\core",
-  "author": {
-    "name": "Artem Chivchalov",
-    "email": "contact@screeps.com"
-  },
-  "bugs": {
-    "url": "https://github.com/screeps/common/issues"
-  },
-  "bundleDependencies": false,
   "dependencies": {
     "dnode": "^1.2.2",
     "eslint": "^5.12.1",
     "lodash": "^3.10.1",
     "q": "^1.4.1"
-  },
-  "deprecated": false,
-  "description": "This is a module for Screeps standalone server. See [main repository](https://github.com/screeps/screeps) for more info.",
-  "homepage": "https://github.com/screeps/common#readme",
-  "license": "ISC",
-  "main": "index.js",
-  "name": "@screeps/common",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/screeps/common.git"
-  },
-  "version": "2.6.0"
+  }
 }
