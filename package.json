@@ -47,5 +47,5 @@
     "type": "git",
     "url": "git+https://github.com/screeps/common.git"
   },
-  "version": "2.6.0"
+  "version": "2.7.0-beta.1"
 }
