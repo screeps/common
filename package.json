@@ -10,7 +10,6 @@
     "url": "https://github.com/screeps/common.git"
   },
   "dependencies": {
-    "dnode": "^1.2.2",
     "eslint": "^5.12.1",
     "lodash": "^3.10.1",
     "q": "^1.4.1"

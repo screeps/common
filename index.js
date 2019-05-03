@@ -1,4 +1,3 @@
-const dnode = require('dnode');
 const q = require('q');
 const net = require('net');
 const path = require('path');
@@ -6,6 +5,7 @@ const _ = require('lodash');
 
 exports.configManager = require('./lib/config-manager');
 exports.storage = require('./lib/storage');
+exports.rpc = require('./lib/rpc');
 
 exports.findPort = function findPort(port) {
     var defer = q.defer();
