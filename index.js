@@ -164,6 +164,22 @@ exports.roomNameToXY = function(name) {
     return [x,y];
 };
 
+exports.getRoomNameFromXY = function(x,y) {
+    if(x < 0) {
+        x = 'W'+(-x-1);
+    }
+    else {
+        x = 'E'+(x);
+    }
+    if(y < 0) {
+        y = 'N'+(-y-1);
+    }
+    else {
+        y = 'S'+(y);
+    }
+    return ""+x+y;
+}
+
 exports.calcWorldSize = function(rooms) {
     var minX = Infinity, minY = Infinity, maxX = 0, maxY = 0;
     rooms.forEach(room => {
