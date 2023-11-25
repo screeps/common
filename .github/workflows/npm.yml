@@ -8,26 +8,27 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v3
+      - name: ⤵️ Checkout
+        uses: actions/checkout@v3
+      - name: 🔨 Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '10.x'
+      - name: 👷 Install
+        run: npm ci
+      - name: 📦️ Publish (npmjs)
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
       # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v3
+      - name: 🔨 Setup node (github registry)
+        uses: actions/setup-node@v3
         with:
           node-version: '10.x'
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
           scope: '@screeps'
-      - name: Install
-        run: npm ci
-      - name: Publish (github)
+      - name: 📦️ Publish (github)
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '10.x'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@screeps'
-      - name: Publish (npmjs)
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
