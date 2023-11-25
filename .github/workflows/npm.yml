@@ -10,10 +10,12 @@ jobs:
     steps:
       - name: ⤵️ Checkout
         uses: actions/checkout@v3
-      - name: 🔨 Setup node
+      - name: 🔨 Setup node (npmjs)
         uses: actions/setup-node@v3
         with:
           node-version: '10.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@screeps'
       - name: 👷 Install
         run: npm ci
       - name: 📦️ Publish (npmjs)
