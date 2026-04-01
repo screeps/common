@@ -1,6 +1,6 @@
 {
   "name": "@screeps/common",
-  "version": "2.16.0-beta",
+  "version": "2.16.0",
   "description": "",
   "main": "index.js",
   "author": "Artem Chivchalov <contact@screeps.com>",
